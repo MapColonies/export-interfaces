@@ -1,14 +1,13 @@
 import { FeatureCollection, MultiPolygon, Polygon } from '@turf/turf';
-import { Domain } from '../enums/domain';
 import { TaskStatus } from '../enums/taskStatus';
-import { ITriggerExportTaskRequest, ITriggerExportTaskResponse, TaskParameters } from './task';
+import { ExportTaskRequest, ExportTaskResponse, TaskParameters } from './task';
 
-export interface IGetEstimatedSizeParams {
+export interface GetEstimatedSizeParams {
   ROI?: FeatureCollection;
   additional?: Record<string, unknown>;
 }
 
-export interface IGetFileSizeParams {
+export interface GetFileSizeParams {
   filePath: string;
   additional?: Record<string, unknown>;
 }
@@ -18,15 +17,13 @@ export interface TaskGeometry {
   metadata?: GeometryMetadata;
 }
 
-export type GeometryMetadata = Record<string, unknown>;
+export declare type GeometryMetadata = Record<string, unknown>;
 
 export interface IExportManager {
-  triggerExportTask: (data: ITriggerExportTaskRequest<TaskParameters>, domain: Domain) => Promise<ITriggerExportTaskResponse>;
-  getGeometries: (jobId: string, domain: Domain) => Promise<TaskGeometry[]>
-  getJobStatus: (jobId: string, domain: Domain) => Promise<TaskStatus>;
-  getJobPercentage: (jobId: string, domain: Domain) => Promise<number>;
-  getEstimatedSize: (domain: Domain, params?: IGetEstimatedSizeParams) => Promise<number>;
-  getFileSize: (catalogRecordID: string, domain: Domain, params: IGetFileSizeParams) => Promise<number>;
-  getExpiredDateTime: (jobId: string, domain: Domain) => Promise<Date>;
-  getFreeDiskSpace: (domain: Domain, additional?: Record<string, unknown>) => Promise<number>;
+  exportTask: (data: ExportTaskRequest<TaskParameters>) => Promise<ExportTaskResponse>;
+  getGeometries: (jobId: string) => Promise<TaskGeometry[]>;
+  getTaskStatus: (jobId: string) => Promise<TaskStatus>;
+  getTaskPercentage: (jobId: string) => Promise<number>;
+  getEstimatedSize: (params?: GetEstimatedSizeParams) => Promise<number>;
+  getFileSize: (catalogRecordID: string, params: GetFileSizeParams) => Promise<number>;
 }

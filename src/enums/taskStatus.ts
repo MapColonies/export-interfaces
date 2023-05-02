@@ -5,6 +5,6 @@ export enum TaskStatus {
   PAUSED = 'PAUSED',
   FAILED = 'FAILED',
   PENDING = 'PENDING',
-  CLEANED = 'CLEANED',
+  EXPIRED = 'EXPIRED',
   ARCHIVED = 'ARCHIVED',
 }
