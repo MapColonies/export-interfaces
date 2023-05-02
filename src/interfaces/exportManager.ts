@@ -22,8 +22,6 @@ export declare type GeometryMetadata = Record<string, unknown>;
 export interface IExportManager {
   exportTask: (data: ExportTaskRequest<TaskParameters>) => Promise<ExportTaskResponse>;
   getGeometries: (jobId: string) => Promise<TaskGeometry[]>;
-  getTaskStatus: (jobId: string) => Promise<TaskStatus>;
-  getTaskPercentage: (jobId: string) => Promise<number>;
   getEstimatedSize: (params?: GetEstimatedSizeParams) => Promise<number>;
   getFileSize: (catalogRecordID: string, params: GetFileSizeParams) => Promise<number>;
 }
