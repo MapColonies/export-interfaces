@@ -1,7 +1,7 @@
 import { EPSG } from '../enums/epsg';
 import { Webhook } from '../interfaces/webhook';
 
-export interface ExportTaskRequest<T> {
+export interface CreateExportTaskRequest<T> {
   catalogRecordId: string;
   artifactCRS: EPSG;
   webhook: Webhook[];
@@ -9,7 +9,7 @@ export interface ExportTaskRequest<T> {
   description?: string;
 }
 
-export interface ExportTaskResponse {
+export interface CreateExportTaskResponse {
   jobId: string;
 }
 

@@ -1,6 +1,5 @@
 import { FeatureCollection, MultiPolygon, Polygon } from '@turf/turf';
-import { TaskStatus } from '../enums/taskStatus';
-import { ExportTaskRequest, ExportTaskResponse, TaskParameters } from './task';
+import { CreateExportTaskRequest, CreateExportTaskResponse, TaskParameters } from './task';
 
 export interface GetEstimatedSizeParams {
   ROI?: FeatureCollection;
@@ -20,7 +19,7 @@ export interface TaskGeometry {
 export declare type GeometryMetadata = Record<string, unknown>;
 
 export interface IExportManager {
-  exportTask: (data: ExportTaskRequest<TaskParameters>) => Promise<ExportTaskResponse>;
+  createExportTask: (data: CreateExportTaskRequest<TaskParameters>) => Promise<CreateExportTaskResponse>;
   getGeometries: (jobId: string) => Promise<TaskGeometry[]>;
   getEstimatedSize: (params?: GetEstimatedSizeParams) => Promise<number>;
   getFileSize: (catalogRecordID: string, params: GetFileSizeParams) => Promise<number>;

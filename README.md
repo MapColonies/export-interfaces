@@ -14,7 +14,7 @@ npm install @mapcolonies/export-interfaces
 export-interfaces exposes the 'Export Manager' interface with common functions to be implement
 ```typescript
 export interface IExportManager {
-  exportTask: (data: ExportTaskRequest<TaskParameters>) => Promise<ExportTaskResponse>;
+  createExportTask: (data: CreateExportTaskRequest<TaskParameters>) => Promise<CrateExportTaskResponse>;
   getGeometries: (jobId: string) => Promise<TaskGeometry[]>;
   getEstimatedSize: (params?: GetEstimatedSizeParams) => Promise<number>;
   getFileSize: (catalogRecordID: string, params: GetFileSizeParams) => Promise<number>;
@@ -36,12 +36,12 @@ export class ExportManager implements IExportManager {
 
 3. implements IExportManager functions
 
-- **exportTask** example:
+- **createExportTask** example:
 ```typescript
 export class ExportManager implements IExportManager {
   public constructor(@inject(SERVICES.LOGGER) private readonly logger: Logger) {}
 
-  public async exportTask(data: ExportTaskRequest<TaskParameters>): Promise<ExportTaskResponse> {
+  public async createExportTask(data: CreateExportTaskRequest<TaskParameters>): Promise<CreateExportTaskResponse> {
     this.logger.info({ msg: 'log message' });
     ...
     ...
@@ -113,5 +113,5 @@ The event message types are intended to be used by the publishers and Export-Man
 publisher should handle those event message types ("DataType") by publish them into message queue on **Redis** server ⇨ use **[BullMQ](https://github.com/taskforcesh/bullmq)** npm package 
 
 
-<a href="https://github.com/taskforcesh/bullmq"><img src="https://user-images.githubusercontent.com/95200/143832033-32e868df-f3b0-4251-97fb-c64809a43d36.png" height="40" /><a> <img src="https://upload.wikimedia.org/wikipedia/en/6/6b/Redis_Logo.svg" height="40" />
+<a href="https://github.com/taskforcesh/bullmq"> <img src="https://user-images.githubusercontent.com/95200/143832033-32e868df-f3b0-4251-97fb-c64809a43d36.png" height="40" /><a> <img src="https://upload.wikimedia.org/wikipedia/en/6/6b/Redis_Logo.svg" height="40" />
 
