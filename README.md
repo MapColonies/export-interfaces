@@ -15,7 +15,6 @@ export-interfaces exposes the 'Export Manager' interface with common functions t
 ```typescript
 export interface IExportManager {
   createExportTask: (data: CreateExportTaskRequest<TaskParameters>) => Promise<CrateExportTaskResponse>;
-  getGeometries: (jobId: string) => Promise<TaskGeometry[]>;
   getEstimatedSize: (params?: GetEstimatedSizeParams) => Promise<number>;
   getFileSize: (catalogRecordID: string, params: GetFileSizeParams) => Promise<number>;
 }
