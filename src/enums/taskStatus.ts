@@ -6,5 +6,4 @@ export enum TaskStatus {
   FAILED = 'FAILED',
   PENDING = 'PENDING',
   EXPIRED = 'EXPIRED',
-  ARCHIVED = 'ARCHIVED',
 }

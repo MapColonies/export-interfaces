@@ -45,26 +45,6 @@ export class ExportManager implements IExportManager {
     this.logger.info({ msg: 'log message' });
     ...
     ...
-    ...
-    return await jobId; // uuid format ⇨ '4b3d6bcd-bbfd-4b2d-9x5d-ab8dfbdd4be4'
-  }
-}
-```
-
----
-
-- **getGeometries** exmaple
-```typescript
-  import { IExportManager, TaskGeometry } from '@map-colonies/export-interfaces';
-  import { MultiPolygon, Polygon } from '@turf/turf'; // ⇨ using '@turf/turf' npm package for Geometry type
-  ...
-  ...
-
-  public async getGeometries(jobId: string): Promise<TaskGeometry[]> {
-    this.logger.info({ msg: 'log message' });
-    ...
-    ...
-    ...
     const geometry1: Polygon = {
       coordinates: [
         [
@@ -94,8 +74,15 @@ export class ExportManager implements IExportManager {
 
     const taskGeometries: TaskGeometry[] = [{ geometry: geometry1, metadata: { maxRes: 0.732 } }, { geometry2 }]; // ⇨ 'metadata' is optional here
     
-    return await taskGeometries;
+    const createExportTaskResponse: CreateExportTaskResponse = {
+      jobId: '4b3d6bcd-bbfd-4b2d-9x5d-ab8dfbdd4be4', // uuid format
+      geometries: taskGeometries,
+    }
+    ...
+
+    return createExportTaskResponse; 
   }
+}
 ```
 
 ---
@@ -106,11 +93,22 @@ export class ExportManager implements IExportManager {
 
 ### Event Message
 ---
-Export-Interfaces exposes different event message types for the [Export-Management](https://github.com/MapColonies/export-management) usage (expects to receive those message objects in order to handle them while event has occurred)
+Export-Interfaces exposes different event message types for each events 
+[Export-Management](https://github.com/MapColonies/export-management) usage (expects to receive those message objects in order to handle them while task event has occurred)
+
+### Task Events: 
++ TaskStartedMessage
++ TaskCompletedMessage
++ TaskFailedMessage
++ TaskAbortedMessage 
++ TaskExpiredMessage 
++ TaskPausedMessage 
 
 The event message types are intended to be used by the publishers and Export-Management as consumer
 
-publisher should handle those event message types ("DataType") by publish them into message queue on **Redis** server ⇨ use **[BullMQ](https://github.com/taskforcesh/bullmq)** npm package 
+publisher should handle those event message types ("DataType") by publishing them into message queue on **Redis** server ⇨ use **[BullMQ](https://github.com/taskforcesh/bullmq)** npm package
+
+
 
 
 <a href="https://github.com/taskforcesh/bullmq"> <img src="https://user-images.githubusercontent.com/95200/143832033-32e868df-f3b0-4251-97fb-c64809a43d36.png" height="40" /><a> <img src="https://upload.wikimedia.org/wikipedia/en/6/6b/Redis_Logo.svg" height="40" />

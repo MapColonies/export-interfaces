@@ -1,7 +1,7 @@
 {
   "name": "@map-colonies/export-interfaces",
-  "version": "1.0.2",
-  "description": "This is template for map colonies typescript packages",
+  "version": "1.0.0",
+  "description": "This package define and expose common interfaces & types for export tasks",
   "main": "./dist/index.js",
   "scripts": {
     "test:unit": "jest --config=./tests/configurations/unit/jest.config.js",
@@ -61,7 +61,7 @@
     "typedoc": "^0.20.36",
     "typescript": "^4.2.4"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@turf/turf": "^6.5.0",
     "geojson": "^0.5.0"
   }

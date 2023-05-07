@@ -44,8 +44,3 @@ export interface TaskPausedMessage extends EventMessage {
   event: TaskEvent.TASK_PAUSED;
   status: TaskStatus.PAUSED;
 }
-
-export interface TaskArchivedMessage extends EventMessage {
-  event: TaskEvent.TASK_ARCHIVED;
-  status: TaskStatus.ARCHIVED;
-}
