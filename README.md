@@ -17,6 +17,7 @@ export interface IExportManager {
   createExportTask: (data: CreateExportTaskRequest<TaskParameters>) => Promise<CrateExportTaskResponse>;
   getEstimatedSize: (params?: GetEstimatedSizeParams) => Promise<number>;
   getFileSize: (catalogRecordID: string, params: GetFileSizeParams) => Promise<number>;
+  getFreeDiskSpace: (params?: Record<string, unknown>) => Promise<number>;
 }
 ```
 most of Export-Interfaces functions uses **[@turf/turf](https://www.npmjs.com/package/@turf/turf)** npm package for geographic data.
@@ -86,8 +87,9 @@ export class ExportManager implements IExportManager {
 
 ---
 
-- **getEstimatedSize** ⇨ returns the ***estimated*** exported **data** size
-- **getFileSize** ⇨ returns the ***actuall*** exported **data** size
+- **getEstimatedSize** ⇨ returns the ***estimated*** exported **data** size in bytes
+- **getFileSize** ⇨ returns the ***actuall*** exported **data** size in bytes
+- **getFreeDiskSpace** ⇨ returns the free disk space size in bytes
 ---
 
 ### Event Message
