@@ -15,8 +15,9 @@ module.exports = {
     'default',
     ['jest-html-reporters', { multipleReportsUnitePath: './reports', pageTitle: 'unit', publicPath: './reports', filename: 'unit.html' }],
   ],
-  coverageThreshold: { // change when and if tests will be needed in the future
-    global: { 
+  coverageThreshold: {
+    // change when and if tests will be needed in the future
+    global: {
       branches: 0,
       functions: 0,
       lines: 0,
