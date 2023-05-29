@@ -14,7 +14,7 @@ npm install @mapcolonies/export-interfaces
 export-interfaces exposes the 'Export Manager' interface with common functions to be implement
 ```typescript
 export interface IExportManager {
-  createExportTask: (data: CreateExportTaskRequest<TaskParameters>) => Promise<CrateExportTaskResponse>;
+  createExportTask: (data: CreateExportTaskRequest<TaskParameters>) => Promise<CreateExportTaskResponse>;
   getEstimatedSize: (params?: GetEstimatedSizeParams) => Promise<number>;
   getFileSize: (catalogRecordID: string, params: GetFileSizeParams) => Promise<number>;
   getFreeDiskSpace: (params?: Record<string, unknown>) => Promise<number>;
@@ -87,9 +87,7 @@ export class ExportManager implements IExportManager {
 
 ---
 
-- **getEstimatedSize** ⇨ returns the ***estimated*** exported **data** size in bytes
-- **getFileSize** ⇨ returns the ***actuall*** exported **data** size in bytes
-- **getFreeDiskSpace** ⇨ returns the free disk space size in bytes
+- **getEstimatations** ⇨ returns the ***estimated*** exported **data** size in bytes and  ***estimated*** export task time in seconds
 ---
 
 ### Event Message
@@ -97,7 +95,7 @@ export class ExportManager implements IExportManager {
 Export-Interfaces exposes different event message types for each events 
 [Export-Management](https://github.com/MapColonies/export-management) usage (expects to receive those message objects in order to handle them while task event has occurred)
 
-### Task Events: 
+### Task Events:
 + TaskStartedMessage
 + TaskCompletedMessage
 + TaskFailedMessage
@@ -105,9 +103,8 @@ Export-Interfaces exposes different event message types for each events
 + TaskExpiredMessage 
 + TaskPausedMessage 
 
-The event message types are intended to be used by the publishers and Export-Management as consumer
 
-publisher should handle those event message types ("DataType") by publishing them into message queue on **Redis** server ⇨ use **[BullMQ](https://github.com/taskforcesh/bullmq)** npm package
+publisher should handle those event message types ("DataType") by publishing them into message queue on **Redis** server ⇨ use **[BullMQ](https://github.com/taskforcesh/bullmq)** npm package  
 
 
 

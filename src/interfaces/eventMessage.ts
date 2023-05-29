@@ -1,4 +1,4 @@
-import { Domain } from '../enums/domain';
+import { Domain } from '@map-colonies/types';
 import { TaskStatus } from '../enums/taskStatus';
 import { TaskEvent } from '../enums/taskEvent';
 import { Artifact } from './artifact';
@@ -8,7 +8,7 @@ interface EventMessage {
   domain: Domain;
   jobId: string;
   status: TaskStatus;
-  finishedAt: Date;
+  finishedAt?: Date;
   precentage?: number;
 }
 

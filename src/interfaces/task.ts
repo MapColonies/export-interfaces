@@ -1,5 +1,5 @@
 import { MultiPolygon, Polygon } from '@turf/turf';
-import { EPSG } from '../enums/epsg';
+import { EPSG } from '@map-colonies/types';
 import { Webhook } from '../interfaces/webhook';
 import { GeometryMetadata } from './exportManager';
 
