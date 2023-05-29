@@ -15,9 +15,7 @@ export-interfaces exposes the 'Export Manager' interface with common functions t
 ```typescript
 export interface IExportManager {
   createExportTask: (data: CreateExportTaskRequest<TaskParameters>) => Promise<CreateExportTaskResponse>;
-  getEstimatedSize: (params?: GetEstimatedSizeParams) => Promise<number>;
-  getFileSize: (catalogRecordID: string, params: GetFileSizeParams) => Promise<number>;
-  getFreeDiskSpace: (params?: Record<string, unknown>) => Promise<number>;
+  getEstimations: (params?: GetEstimationsRequest) => Promise<GetEstimationsResponse>;
 }
 ```
 most of Export-Interfaces functions uses **[@turf/turf](https://www.npmjs.com/package/@turf/turf)** npm package for geographic data.
