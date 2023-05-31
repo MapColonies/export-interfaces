@@ -8,8 +8,8 @@ export interface GetEstimationsRequest {
 }
 
 export interface GetEstimationsResponse {
-  estimatedFileSize: number;
-  estimatedTime: number;
+  estimatedFileSize?: number;
+  estimatedTime?: number;
 }
 
 export declare type GeometryMetadata = Record<string, unknown>;
