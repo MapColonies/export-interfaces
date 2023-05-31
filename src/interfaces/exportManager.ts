@@ -15,6 +15,6 @@ export interface GetEstimationsResponse {
 export declare type GeometryMetadata = Record<string, unknown>;
 
 export interface IExportManager {
-  createExportTask: (data: CreateExportTaskRequest<TaskParameters>, triggerExport: boolean) => Promise<CreateExportTaskResponse>;
+  createExportTask: (data: CreateExportTaskRequest<TaskParameters>) => Promise<CreateExportTaskResponse>;
   getEstimations: (params?: GetEstimationsRequest) => Promise<GetEstimationsResponse>;
 }
