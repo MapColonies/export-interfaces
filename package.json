@@ -62,7 +62,7 @@
     "typescript": "^4.2.4"
   },
   "peerDependencies": {
-    "@map-colonies/types": "file:../types/map-colonies-types-1.0.0.tgz",
+    "@map-colonies/types": "^1.2.1",
     "@turf/turf": "^6.5.0"
   }
 }
