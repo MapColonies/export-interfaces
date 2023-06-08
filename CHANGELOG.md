@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.1.0 (2023-06-08)
+
+
+### Features
+
+* added export and event message interfaces ([#1](https://github.com/MapColonies/export-interfaces/issues/1)) ([2144d3e](https://github.com/MapColonies/export-interfaces/commit/2144d3e3d2e79d4bc2c7b8832b9e41a71f170f16))
 
 ### 1.0.0 (2023-05-07)
 
