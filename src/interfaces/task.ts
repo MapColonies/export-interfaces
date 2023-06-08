@@ -3,6 +3,7 @@ import { EPSG } from '@map-colonies/types';
 import { Webhook } from '../interfaces/webhook';
 import { GeometryMetadata } from './exportManager';
 
+/* eslint-disable @typescript-eslint/naming-convention */
 export interface CreateExportTaskRequest<T> {
   catalogRecordID: string;
   artifactCRS: EPSG;

@@ -1,4 +1,4 @@
-import { FeatureCollection } from "@turf/turf";
+import { FeatureCollection } from '@turf/turf';
 import { CreateExportTaskRequest, CreateExportTaskResponse, TaskParameters } from './task';
 
 /* eslint-disable @typescript-eslint/naming-convention */
