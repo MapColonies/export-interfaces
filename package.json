@@ -1,7 +1,7 @@
 {
-  "name": "@map-colonies/ts-npm-package-boilerplate",
-  "version": "1.0.2",
-  "description": "This is template for map colonies typescript packages",
+  "name": "@map-colonies/export-interfaces",
+  "version": "1.0.0",
+  "description": "This package define and expose common interfaces & types for export tasks",
   "main": "./dist/index.js",
   "scripts": {
     "test:unit": "jest --config=./tests/configurations/unit/jest.config.js",
@@ -22,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MapColonies/ts-npm-package-boilerplate.git"
+    "url": "git+https://github.com/MapColonies/export-interfaces.git"
   },
   "author": "MapColonies",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MapColonies/ts-npm-package-boilerplate/issues"
+    "url": "https://github.com/MapColonies/export-interfaces/issues"
   },
   "husky": {
     "hooks": {
@@ -38,7 +38,7 @@
   "files": [
     "dist/**/*"
   ],
-  "homepage": "https://github.com/MapColonies/ts-npm-package-boilerplate#readme",
+  "homepage": "https://github.com/MapColonies/export-interfaces#readme",
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
@@ -58,7 +58,11 @@
     "standard-version": "^9.3.0",
     "ts-jest": "^26.4.4",
     "ts-node": "^9.1.1",
-    "typedoc": "^0.20.36",
+    "typedoc": "^0.24.8",
     "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "@map-colonies/types": "file:../types/map-colonies-types-1.0.0.tgz",
+    "@turf/turf": "^6.5.0"
   }
 }
