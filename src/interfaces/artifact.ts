@@ -5,6 +5,6 @@ declare type AtrifactType = ArtifactDEMType | ArtifactRasterType | Artifact3DTyp
 export interface Artifact {
   name: string;
   type: AtrifactType;
-  uri: string;
+  url: string;
   size: number;
 }

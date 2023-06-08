@@ -4,7 +4,7 @@ import { Webhook } from '../interfaces/webhook';
 import { GeometryMetadata } from './exportManager';
 
 export interface CreateExportTaskRequest<T> {
-  catalogRecordId: string;
+  catalogRecordID: string;
   artifactCRS: EPSG;
   webhook: Webhook[];
   ROI?: FeatureCollection;
