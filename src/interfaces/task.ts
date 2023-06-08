@@ -1,12 +1,12 @@
 import { FeatureCollection, MultiPolygon, Polygon } from '@turf/turf';
-import { EPSG } from '@map-colonies/types';
+import { Epsg } from '@map-colonies/types';
 import { Webhook } from '../interfaces/webhook';
 import { GeometryMetadata } from './exportManager';
 
 /* eslint-disable @typescript-eslint/naming-convention */
 export interface CreateExportTaskRequest<T> {
   catalogRecordID: string;
-  artifactCRS: EPSG;
+  artifactCRS: Epsg;
   webhook: Webhook[];
   ROI?: FeatureCollection;
   parameters?: T;
