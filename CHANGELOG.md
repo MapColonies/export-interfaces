@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/MapColonies/export-interfaces/compare/v1.1.1...v1.1.2) (2023-06-11)
+
+
+### Bug Fixes
+
+* task events type ([0f04c65](https://github.com/MapColonies/export-interfaces/commit/0f04c6576660e32d009e3ac0aeb274c1c2c913a7))
+
 ### [1.1.1](https://github.com/MapColonies/export-interfaces/compare/v1.1.0...v1.1.1) (2023-06-08)
 
 
