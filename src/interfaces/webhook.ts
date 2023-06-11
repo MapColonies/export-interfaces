@@ -1,6 +1,6 @@
 import { TaskEvent } from '../enums/taskEvent';
 
 export interface Webhook {
-  events: TaskEvent;
+  events: TaskEvent[];
   url: string;
 }
