@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/MapColonies/export-interfaces/compare/v1.1.2...v1.1.3) (2023-06-11)
+
+
+### Bug Fixes
+
+* artifact epsg code ([5f38de0](https://github.com/MapColonies/export-interfaces/commit/5f38de0adaec647b0b3e60260ba86c5a13e61367))
+
 ### [1.1.2](https://github.com/MapColonies/export-interfaces/compare/v1.1.1...v1.1.2) (2023-06-11)
 
 
