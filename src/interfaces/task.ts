@@ -1,15 +1,17 @@
 import { FeatureCollection, MultiPolygon, Polygon } from '@turf/turf';
-import { EpsgCode } from '@map-colonies/types';
+import { Domain, EpsgCode } from '@map-colonies/types';
 import { Webhook } from '../interfaces/webhook';
 import { GeometryMetadata } from './exportManager';
 
 /* eslint-disable @typescript-eslint/naming-convention */
 export interface CreateExportTaskRequest<T> {
   catalogRecordID: string;
+  domain: Domain;
   artifactCRS: EpsgCode;
   webhook: Webhook[];
   ROI?: FeatureCollection;
   parameters?: T;
+  keywords?: Record<string, unknown>;
   description?: string;
 }
 
