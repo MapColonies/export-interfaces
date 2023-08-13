@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.6](https://github.com/MapColonies/export-interfaces/compare/v1.1.4...v1.1.6) (2023-08-13)
+
+
+### Bug Fixes
+
+* added domain & keywords fields to create export task ([0c4d249](https://github.com/MapColonies/export-interfaces/commit/0c4d24985698d53bb7ab274fbde0db439efa7715))
+* node 16 tests ([7f9647f](https://github.com/MapColonies/export-interfaces/commit/7f9647f0242185d0079a1a4b5ac0f34b960453af))
+* node 18 ([6189cf6](https://github.com/MapColonies/export-interfaces/commit/6189cf6c883dc45ab6bd30adc9daef2470b4d431))
+* node 18 tests ([8755369](https://github.com/MapColonies/export-interfaces/commit/8755369f4b3cccbca466302f170edc93afa057b8))
+* node 18 tests ([ce5fe6f](https://github.com/MapColonies/export-interfaces/commit/ce5fe6f82f2fa5c0b65d31617adb8037e20aeaab))
+* package lock ([9600bea](https://github.com/MapColonies/export-interfaces/commit/9600bea30aa3162448d52d6a13ba32ee0e9e566a))
+
 ### [1.1.5](https://github.com/MapColonies/export-interfaces/compare/v1.1.4...v1.1.5) (2023-08-13)
 
 
