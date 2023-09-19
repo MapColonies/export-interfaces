@@ -6,15 +6,15 @@ export interface GetEstimationsResponse {
   estimatedTime?: number;
 }
 
-export interface RasterEstParams {}
-export interface DemEstParams {}
-export interface EstParams3D {}
+export interface RasterEstimationsParams {}
+export interface DemEstimationsParams {}
+export interface EstimationsParams3D {}
 
 export declare type GeometryMetadata = Record<string, unknown>;
-export declare type EstimationsParams = RasterEstParams | DemEstParams | EstParams3D;
+export declare type EstimationsParams = RasterEstimationsParams | DemEstimationsParams | EstimationsParams3D;
 
 export interface IExportManager {
   createExportTask: (data: CreateExportTaskRequest<TaskParameters>) => Promise<CreateExportTaskResponse>;
-  getEstimations: (catalogRecordID: string, ROI: FeatureCollection, additional?: EstParams3D) => Promise<GetEstimationsResponse>;
+  getEstimations: (catalogRecordID: string, ROI: FeatureCollection, additional?: EstimationsParams) => Promise<GetEstimationsResponse>;
   getFootprint: (catalogRecordID: string) => Promise<FeatureCollection>;
 }
