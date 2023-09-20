@@ -9,7 +9,7 @@ export interface CreateExportTaskRequest<T> {
   domain: Domain;
   artifactCRS: EpsgCode;
   webhook: Webhook[];
-  ROI?: FeatureCollection;
+  ROI: FeatureCollection;
   parameters?: T;
   keywords?: Record<string, unknown>;
   description?: string;
