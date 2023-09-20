@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/MapColonies/export-interfaces/compare/v1.1.5...v1.2.0) (2023-09-20)
+
+
+### Features
+
+* adjust estimations params and added footprint method ([#5](https://github.com/MapColonies/export-interfaces/issues/5)) ([236a286](https://github.com/MapColonies/export-interfaces/commit/236a286000f20f9c3685bfdbc09639f56eb392de))
+
 ### 1.1.5 (2023-08-13)
 
 ### [1.1.4](https://github.com/MapColonies/export-interfaces/compare/v1.1.2...v1.1.4) (2023-06-11)
