@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/MapColonies/export-interfaces/compare/v1.2.1...v1.3.0) (2024-03-11)
+
+
+### Features
+
+* added sha256 to artifact + additional props for export task response ([#7](https://github.com/MapColonies/export-interfaces/issues/7)) ([d55572f](https://github.com/MapColonies/export-interfaces/commit/d55572fdf8a79a139c34fb82fd69126b139efb7e))
+
 ### [1.2.1](https://github.com/MapColonies/export-interfaces/compare/v1.2.0...v1.2.1) (2023-09-20)
 
 ## [1.2.0](https://github.com/MapColonies/export-interfaces/compare/v1.1.5...v1.2.0) (2023-09-20)
