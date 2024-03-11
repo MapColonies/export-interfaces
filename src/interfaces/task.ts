@@ -1,7 +1,9 @@
 import { FeatureCollection, MultiPolygon, Polygon } from '@turf/turf';
 import { Domain, EpsgCode } from '@map-colonies/types';
+import { TaskStatus } from '../enums/taskStatus';
 import { Webhook } from '../interfaces/webhook';
 import { GeometryMetadata } from './exportManager';
+import { Artifact } from './artifact';
 
 /* eslint-disable @typescript-eslint/naming-convention */
 export interface CreateExportTaskRequest<T> {
@@ -17,7 +19,11 @@ export interface CreateExportTaskRequest<T> {
 
 export interface CreateExportTaskResponse {
   jobId: string;
-  geometries: TaskGeometry[];
+  taskGeometries: TaskGeometry[];
+  expiredAt?: Date;
+  status?: TaskStatus;
+  artifacts?: Artifact[];
+  progress?: number;
 }
 
 export interface TaskGeometry {
