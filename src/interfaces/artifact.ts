@@ -7,4 +7,5 @@ export interface Artifact {
   type: AtrifactType;
   url: string;
   size: number;
+  sha256?: string;
 }
