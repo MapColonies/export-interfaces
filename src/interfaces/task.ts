@@ -10,7 +10,7 @@ export interface CreateExportTaskRequest<T> {
   catalogRecordID: string;
   domain: Domain;
   artifactCRS: EpsgCode;
-  webhook: Webhook[];
+  webhooks: Webhook[];
   ROI: FeatureCollection;
   parameters?: T;
   keywords?: Record<string, unknown>;
