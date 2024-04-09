@@ -1,10 +1,10 @@
 import { Artifact3DType, ArtifactDEMType, ArtifactRasterType } from '@map-colonies/types';
 
-declare type AtrifactType = ArtifactDEMType | ArtifactRasterType | Artifact3DType;
+declare type ArtifactType = ArtifactDEMType | ArtifactRasterType | Artifact3DType;
 
 export interface Artifact {
   name: string;
-  type: AtrifactType;
+  type: ArtifactType;
   url: string;
   size: number;
   sha256?: string;
