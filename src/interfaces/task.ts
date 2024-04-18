@@ -19,6 +19,7 @@ export interface CreateExportTaskRequest<T> {
 
 export interface CreateExportTaskResponse {
   jobId: string;
+  ROI: FeatureCollection;
   taskGeometries: TaskGeometry[];
   expiredAt?: Date;
   status?: TaskStatus;
