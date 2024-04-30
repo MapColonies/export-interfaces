@@ -1,6 +1,6 @@
 import { Artifact3DType, ArtifactDEMType, ArtifactRasterType } from '@map-colonies/types';
 
-declare type ArtifactType = ArtifactDEMType | ArtifactRasterType | Artifact3DType;
+export declare type ArtifactType = ArtifactDEMType | ArtifactRasterType | Artifact3DType;
 
 export interface Artifact {
   name: string;
