@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/MapColonies/export-interfaces/compare/v1.3.0...v1.4.0) (2024-04-30)
+
+
+### Features
+
+* added ROI to export task response + export artifact type ([#9](https://github.com/MapColonies/export-interfaces/issues/9)) ([d50f361](https://github.com/MapColonies/export-interfaces/commit/d50f361da6eb15dc5df77376ca3fd12df9aba186))
+
+
+### Bug Fixes
+
+* webhook and artifact type naming ([#8](https://github.com/MapColonies/export-interfaces/issues/8)) ([993720e](https://github.com/MapColonies/export-interfaces/commit/993720eecc501e25ccb2b7d16975adbe70e20d48))
+
 ## [1.3.0](https://github.com/MapColonies/export-interfaces/compare/v1.2.1...v1.3.0) (2024-03-11)
 
 
