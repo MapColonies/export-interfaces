@@ -6,15 +6,22 @@ import { Artifact } from './artifact';
 interface EventMessage {
   event: TaskEvent;
   domain: Domain;
+  customerName: string;
   jobId: string;
   status: TaskStatus;
   finishedAt?: Date;
-  precentage?: number;
+  progress?: number;
 }
 
 export interface TaskStartedMessage extends EventMessage {
   event: TaskEvent.TASK_STARTED;
   status: TaskStatus.IN_PROGRESS;
+}
+
+export interface TaskProgressMessage extends EventMessage {
+  event: TaskEvent.TASK_IN_PROGRESS;
+  status: TaskStatus.IN_PROGRESS;
+  progress: number;
 }
 
 export interface TaskCompletedMessage extends EventMessage {
@@ -44,3 +51,12 @@ export interface TaskPausedMessage extends EventMessage {
   event: TaskEvent.TASK_PAUSED;
   status: TaskStatus.PAUSED;
 }
+
+export type TaskEventMessage =
+  | TaskStartedMessage
+  | TaskProgressMessage
+  | TaskCompletedMessage
+  | TaskFailedMessage
+  | TaskAbortedMessage
+  | TaskExpiredMessage
+  | TaskPausedMessage;
